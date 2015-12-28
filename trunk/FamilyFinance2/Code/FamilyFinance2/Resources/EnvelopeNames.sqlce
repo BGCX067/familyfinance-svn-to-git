@@ -1,0 +1,7 @@
+SELECT id, name
+FROM Envelope
+WHERE id > 0 AND closed = 0 @@
+ORDER BY name;
+
+--@ AND groupID = 5
+--@

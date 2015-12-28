@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC08307B-DECC-458E-93F9-6D687AC77D16}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FamilyFinance2</RootNamespace>
+    <AssemblyName>FamilyFinance2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>MoneyEnvelopeIcon.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AccountType\AccountTypeDataSet.cs">
+      <DependentUpon>AccountTypeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountType\AccountTypeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccountType\AccountTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountType\AccountTypeForm.Designer.cs">
+      <DependentUpon>AccountTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DateSelector\DateSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DateSelector\DateSelector.Designer.cs">
+      <DependentUpon>DateSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditAccounts\EADataSet.cs">
+      <DependentUpon>EADataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\EditAccounts\EADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditAccounts\EditAccountsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditAccounts\EditAccountsForm.Designer.cs">
+      <DependentUpon>EditAccountsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditEnvelopes\EditEnvelopesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditEnvelopes\EditEnvelopesForm.Designer.cs">
+      <DependentUpon>EditEnvelopesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditEnvelopes\EEDataSet.cs">
+      <DependentUpon>EEDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\EditEnvelopes\EEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EEDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditGroup\EditGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditGroup\EditGroupForm.Designer.cs">
+      <DependentUpon>EditGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditGroup\GroupDataSet.cs">
+      <DependentUpon>GroupDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\EditGroup\GroupDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FindDB\FindDBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FindDB\FindDBForm.Designer.cs">
+      <DependentUpon>FindDBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Import\FFDataSet.cs">
+      <DependentUpon>FFDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Import\FFDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FFDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Import\Qif\ImportQIFForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Import\Qif\ImportQIFForm.Designer.cs">
+      <DependentUpon>ImportQIFForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Import\Qif\ImportQIF.cs">
+    </Compile>
+    <Compile Include="Forms\Import\Qif\QifData.cs" />
+    <Compile Include="Forms\LineType\LineTypeDataSet.cs">
+      <DependentUpon>LineTypeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\LineType\LineTypeDataSet.Designer.cs">
+      <DependentUpon>LineTypeDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Forms\LineType\LineTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LineType\LineTypeForm.Designer.cs">
+      <DependentUpon>LineTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\RegistrySplit\AccountTLV.cs" />
+    <Compile Include="Forms\Main\RegistrySplit\AutoDistribute.cs" />
+    <Compile Include="Forms\Main\RegistrySplit\MultiDataGridView.cs" />
+    <Compile Include="Forms\Main\RegistrySplit\MyTreeListNode.cs" />
+    <Compile Include="Forms\Main\RegistrySplit\RegistryDataSet.cs">
+      <DependentUpon>RegistryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\RegistrySplit\RegistryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\RegistrySplit\RegistrySplit.cs" />
+    <Compile Include="Forms\Transaction\CDLinesDGV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\EnvelopeLineDGV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\TransactionDataSet.cs">
+      <DependentUpon>TransactionDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\TransactionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transaction\TransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\TransactionForm.Designer.cs">
+      <DependentUpon>TransactionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AccountType\AccountTypeForm.af.resx">
+      <DependentUpon>AccountTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccountType\AccountTypeForm.resx">
+      <DependentUpon>AccountTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DateSelector\DateSelector.resx">
+      <DependentUpon>DateSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditAccounts\EditAccountsForm.resx">
+      <DependentUpon>EditAccountsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditEnvelopes\EditEnvelopesForm.resx">
+      <DependentUpon>EditEnvelopesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditGroup\EditGroupForm.resx">
+      <DependentUpon>EditGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDB\FindDBForm.resx">
+      <DependentUpon>FindDBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Import\Qif\ImportQIFForm.resx">
+      <DependentUpon>ImportQIFForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LineType\LineTypeForm.resx">
+      <DependentUpon>LineTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transaction\TransactionForm.resx">
+      <DependentUpon>TransactionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SharedElements\CalanderColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SharedElements\DB_Queries.cs" />
+    <Compile Include="SharedElements\Pieces.cs" />
+    <Compile Include="SharedElements\TreeList\Tracing.cs" />
+    <Compile Include="SharedElements\TreeList\TreeListColumn.cs" />
+    <Compile Include="SharedElements\TreeList\TreeListColumn.Design.cs" />
+    <Compile Include="SharedElements\TreeList\TreeListNode.cs" />
+    <Compile Include="SharedElements\TreeList\TreeListOptions.cs" />
+    <Compile Include="SharedElements\TreeList\TreeListPainter.cs" />
+    <Compile Include="SharedElements\TreeList\TreeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SharedElements\TreeList\Util.cs" />
+    <Compile Include="Testing\StressDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StressDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\Testing.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FamilyFinanceDB.sdf">
+    </Content>
+    <Content Include="MoneyEnvelopeIcon.ico" />
+    <Content Include="Resources\TLVBankAndFlag.png" />
+    <Content Include="Resources\TLVRedEnvelope.png" />
+    <None Include="Forms\Main\RegistrySplit\RegistryDataSet.xsc">
+      <DependentUpon>RegistryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\Main\RegistrySplit\RegistryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegistryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\Main\RegistrySplit\RegistryDataSet.xss">
+      <DependentUpon>RegistryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\AccountErrors.sqlce" />
+    <None Include="Resources\AccountSingleBalance.sqlce" />
+    <None Include="Resources\AESingleBalance.sqlce" />
+    <None Include="Resources\CountAccountErrors.sqlce" />
+    <None Include="Resources\CountELines.sqlce" />
+    <None Include="Resources\DeleteOrphanELines.sqlce" />
+    <None Include="Resources\EnvelopeSingleBalance.sqlce" />
+    <None Include="Resources\LineEnvelopeLineErrors.sqlce" />
+    <None Include="Resources\LineTransactionErrors.sqlce" />
+    <None Include="Resources\TLVBank.png" />
+    <None Include="Resources\TLVRedBank.png" />
+    <None Include="Forms\AccountType\AccountTypeDataSet.xsc">
+      <DependentUpon>AccountTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\AccountType\AccountTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountTypeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Forms\AccountType\AccountTypeDataSet.xss">
+      <DependentUpon>AccountTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\EditAccounts\EADataSet.xsc">
+      <DependentUpon>EADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\EditAccounts\EADataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EADataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\EditAccounts\EADataSet.xss">
+      <DependentUpon>EADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\EditEnvelopes\EEDataSet.xsc">
+      <DependentUpon>EEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\EditEnvelopes\EEDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EEDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\EditEnvelopes\EEDataSet.xss">
+      <DependentUpon>EEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\EditGroup\GroupDataSet.xsc">
+      <DependentUpon>GroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\EditGroup\GroupDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GroupDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\EditGroup\GroupDataSet.xss">
+      <DependentUpon>GroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\Import\FFDataSet.xsc">
+      <DependentUpon>FFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\Import\FFDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FFDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\Import\FFDataSet.xss">
+      <DependentUpon>FFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\LineType\LineTypeDataSet.xsc">
+      <DependentUpon>LineTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\LineType\LineTypeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LineTypeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\LineType\LineTypeDataSet.xss">
+      <DependentUpon>LineTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\Transaction\TransactionDataSet.xsc">
+      <DependentUpon>TransactionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\Transaction\TransactionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransactionDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\Transaction\TransactionDataSet.xss">
+      <DependentUpon>TransactionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\AccountBalances.sqlce" />
+    <None Include="Resources\AccountDetails.sqlce" />
+    <None Include="Resources\AccountTypes.sqlce" />
+    <None Include="Resources\AEBalance.sqlce" />
+    <None Include="Resources\BuildTables.sqlce" />
+    <None Include="Resources\DropTables.sqlce" />
+    <None Include="Resources\EnvelopeBalances.sqlce" />
+    <None Include="Resources\EnvelopeGroups.sqlce" />
+    <None Include="Resources\EnvelopeNames.sqlce" />
+    <None Include="Resources\SetAccountEnvelopes.sqlce" />
+    <None Include="Resources\SubAccountBalances.sqlce" />
+    <None Include="Resources\SubEnvelopeBalances.sqlce" />
+    <None Include="Resources\TestData.sqlce" />
+    <None Include="Resources\TLVRedFlag.png" />
+    <None Include="Resources\TLVMoney.png" />
+    <None Include="Resources\TLVEnvelope.png" />
+    <None Include="Testing\StressDataSet.xsc">
+      <DependentUpon>StressDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Testing\StressDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StressDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Testing\StressDataSet.xss">
+      <DependentUpon>StressDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FamilyFinance.Buisness.TransactionModel" Collapsed="true">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAFAIAgAAAAAAABCAACAAAAAAAAAQgAgQAAIAAA=</HashCode>
+      <FileName>Buisness\TransactionModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FamilyFinance.Buisness.TransactionDRM" Collapsed="true">
+    <Position X="0.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAgAIAAAAAAAAAgAAAAABAhAAACAAAAAAA=</HashCode>
+      <FileName>Buisness\TransactionDRM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FamilyFinance.Buisness.RegistryLineModel" Collapsed="true">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAABAAAAgAIAAAAAAAAEgAAAAABAhAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\Registry\RegistryLineModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FamilyFinance.Buisness.LineItemDRM" Collapsed="true">
+    <Position X="3.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAECAIACAgAAgQChAAgAAAAAgAQABgAAAAA=</HashCode>
+      <FileName>Buisness\LineItemDRM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FamilyFinance.Buisness.EnvelopeLineDRM" Collapsed="true">
+    <Position X="6" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAIIAAAgAQAAAEAAAQCgACAAAAAAAAAAAAgBAAA=</HashCode>
+      <FileName>Buisness\EnvelopeLineDRM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FamilyFinance.Buisness.DataSetModel" Collapsed="true">
+    <Position X="26.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEJBBgBgEBgbAABBFCAAAAAICAciAQBAhAUAAEAI=</HashCode>
+      <FileName>Buisness\DataSetModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FamilyFinance.Buisness.LineItemModel" Collapsed="true">
+    <Position X="3.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEiIAAAAAAAAAAAAAgAAIAAAAgAAAAgAAEAAAAAA=</HashCode>
+      <FileName>Buisness\LineItemModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
